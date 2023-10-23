@@ -1,0 +1,139 @@
+.analog-clock {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: calc(40% - 150px);
+	background-color: black;
+	border-radius: 50%;
+	box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+
+	.hour-hand {
+		position: absolute;
+		height: 60px;
+		width: 7px;
+		background-color: white;
+		left: calc(50% - 3.5px);
+		bottom: 50%;
+		transform-origin: center 100%;
+		z-index: 30;
+
+		&::after {
+			content: "";
+			width: 7px;
+			height: 15px;
+			background-color: white;
+			position: absolute;
+			bottom: -15px;
+			z-index: 30;
+		}
+	}
+
+	.minute-hand {
+		position: absolute;
+		height: 115px;
+		width: 4px;
+		background-color: white;
+		left: calc(50% - 2px);
+		bottom: 50%;
+		transform-origin: center 100%;
+		z-index: 20;
+
+		&::after {
+			content: "";
+			width: 4px;
+			height: 15px;
+			background-color: white;
+			position: absolute;
+			bottom: -15px;
+			z-index: 20;
+		}
+	}
+
+	.second-hand {
+		position: absolute;
+		height: 140px;
+		width: 2px;
+		background-color: white;
+		left: calc(50% - 1px);
+		bottom: 50%;
+		transform-origin: center 100%;
+		z-index: 10;
+	}
+
+	.semi-clock {
+		position: absolute;
+		width: 300px;
+		height: 150px;
+		bottom: calc(50% - 200px);
+		background-color: rgb(214, 210, 210);
+		border-radius: 0 0 10rem 10rem;
+	}
+
+
+	&.small {
+		width: 250px;
+		height: 250px;
+
+		.hour-hand {
+			height: 50px;
+
+			&::after {
+				content: "";
+				height: 10px;
+				bottom: -10px;
+			}
+		}
+
+		.minute-hand {
+			height: 88px;
+
+			&::after {
+				content: "";
+				height: 10px;
+				bottom: -10px;
+			}
+		}
+
+		.second-hand {
+			height: 110px;
+		}
+	}
+
+	&.large {
+		top: calc(30% - 150px);
+		width: 350px;
+		height: 350px;
+
+		.hour-hand {
+			height: 70px;
+
+			&::after {
+				content: "";
+				height: 15px;
+				bottom: -15px;
+			}
+		}
+
+		.minute-hand {
+			height: 113px;
+
+			&::after {
+				content: "";
+				height: 10px;
+				bottom: -10px;
+			}
+		}
+
+		.second-hand {
+			height: 125px;
+		}
+
+		.semi-clock {
+			width: 350px;
+		}
+	}
+
+}
